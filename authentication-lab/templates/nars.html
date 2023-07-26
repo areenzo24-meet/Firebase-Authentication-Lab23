@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>enjoy your shopping with NARS</title>
+	<style>
+		body {
+			background-color: #f9f9f9;
+			font-family: Arial, sans-serif;
+		}
+
+		form {
+			margin: 20px auto;
+			padding: 20px;
+			max-width: 300px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input[type="radio"] {
+			display: none;
+		}
+
+		label img {
+			width: 50px;
+			height: 50px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: transform 0.2s;
+		}
+
+		input[type="radio"]:checked + img {
+			transform: scale(1.1);
+		}
+
+		input[type="submit"] {
+			display: block;
+			margin-top: 20px;
+			padding: 10px 20px;
+			background-color: #ff69b4;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.2s;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #ff449f;
+		}
+	</style>
+</head>
+<body>
+		
+		<form action='/nars' method='post'>
+			<label>
+			<input type="radio" name="product" value="/static/css/nars5.jpg">
+			<img src="/static/css/nars5.jpg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/nars6.jpeg">
+			<img src="/static/css/nars6.jpeg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/nars7.jpg">
+			<img src="/static/css/nars7.jpg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/nars8.jpg">
+			<img src="/static/css/nars8.jpg" style="width:500px;height:500px;">
+			</label>
+			<br>
+
+			<input type="submit" value="Add to Cart">
+		</form>
+
+
+
+
+
+
+
+
+
+		
+
+</body>
+</html>

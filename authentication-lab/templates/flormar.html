@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>enjoy your shopping with FLORMAR</title>
+	<style>
+		body {
+			background-color: #f9e6e6; /* Light pink background */
+			font-family: Arial, sans-serif;
+		}
+
+		form {
+			padding: 10px;
+			border: 1px solid #ff99cc; /* Pink border */
+			border-radius: 10px;
+			background-color: #fff0f5; /* Light pink form background */
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input[type="submit"] {
+			background-color: #ff66b3; /* Pink submit button */
+			color: #ffffff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		img {
+			border: 3px solid #ff99cc; /* Pink border around images */
+			border-radius: 500px;
+			margin-right: 100px;
+		}
+	</style>
+</head>
+<body>
+		<form action='/flormar' method='post'>
+			<label>
+			<input type="radio" name="product" value="/static/css/flormar5.png">
+			<img src="/static/css/flormar5.png" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/flormar6.jpeg">
+			<img src="/static/css/flormar6.jpeg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/flormar8.jpg">
+			<img src="/static/css/flormar8.jpg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/flormar7.png">
+			<img src="/static/css/flormar7.png" style="width:500px;height:500px;">
+			</label>
+			<br>
+
+			<input type="submit" value="Add to Cart">
+		</form>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

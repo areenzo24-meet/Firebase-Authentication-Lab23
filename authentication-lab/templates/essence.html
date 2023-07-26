@@ -1,0 +1,90 @@
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>enjoy shopping with ESSENCE</title>
+	<style>
+		body {
+			background-color: pink;
+			font-family: Arial, sans-serif;
+			padding: 20px;
+		}
+		form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+		label {
+			display: block;
+			margin-bottom: 100px;
+		}
+		input[type="radio"] {
+			display: none;
+		}
+		label img {
+			width: 250px;
+			height: 250px;
+			border-radius:500% ;
+			border: 200px solid #fff;
+			cursor: pointer;
+			transition: border-color 1s ease-in-out;
+		}
+		label img:hover {
+			border-color: pink;
+		}
+		input[type="submit"] {
+			background-color: pink;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 20px;
+		}
+		input[type="submit"]:hover {
+			background-color: #ff8dd1;
+		}
+	</style>		
+	</head>
+	<body>
+		<form action='/essence' method='post'>
+	
+			<label>
+			<input type="radio" name="product" value="/static/css/essence1.jpg">
+			<img src="/static/css/essence1.jpg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/essence2.jpeg">
+			<img src="/static/css/essence2.jpeg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/essence8.jpg">
+			<img src="/static/css/essence8.jpg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/essence9.jpg">
+			<img src="/static/css/essence9.jpg" style="width:500px;height:500px;">
+			</label>
+			<br>
+
+			<input type="submit" value="Add to Cart">
+			
+			
+		</form>
+
+
+	
+	</body>
+	</html>

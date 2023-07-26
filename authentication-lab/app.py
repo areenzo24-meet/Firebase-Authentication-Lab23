@@ -28,7 +28,7 @@ def signin():
             email = request.form['email']
             password = request.form['password']
             login_session['user'] = auth.sign_in_with_email_and_password(email, password)
-            return redirect(url_for('add_tweet'))
+            return redirect(url_for('brand'))
         except:
             error = "Authentication failed"
     return render_template("signin.html")
@@ -43,42 +43,70 @@ def signup():
         password = request.form['password']
         name = request.form['name']
         usename = request.form['username']
-        bio = request.form['bio']
 
         try:
             login_session['user'] = auth.create_user_with_email_and_password(email, password)
-            user = { "email":email, "name":name , "usename":usename , "bio":bio }
+            user = { "email":email, "name":name , "usename":usename }
             UID = login_session['user']['localId']
             db.child("Users").child(UID).set(user)
             users = db.child("Users").get().val()
-            return redirect(url_for('add_tweet'))
+            return redirect(url_for('brand'))
         except Exception as e:
             print("SIGN UP ERROR:", e)
             error = "Authentication failed"
     return render_template("signup.html")
 
 
-@app.route('/add_tweet', methods=['GET', 'POST'])
-def add_tweet():
-    if request.method =='POST' :
-        try:
-            title = request.form['title']
-            text = request.form['text']
-            UID = login_session['user']['localId']
-            tweet = {"uid":UID , "title": title , "text":text}
-            db.child("tweets").push(tweet)
-            return redirect(url_for('all_tweets'))
-        except Exception as e:
-            print("Add TWEET ERROR:", e)
-            error = "Authentication failed"
-
-    return render_template("add_tweet.html")
+@app.route('/brand', methods=['GET', 'POST'])
+def brand():
+    return render_template("brand.html")
 
 
-@app.route('/all_tweets')
-def all_tweets():
-    tweets = db.child('tweets').get().val()
-    return render_template("tweets.html", tweets=tweets)
+@app.route('/dior', methods=['GET', 'POST'])
+def dior():
+    if request.method == "POST":
+        d_link = request.form.get('product')
+        dior = {"link": d_link}
+        db.child("Cart").push(dior)
+        return redirect(url_for('cart'))
+    return render_template('dior.html')
+
+
+@app.route('/essence', methods=['GET', 'POST'])
+def essence():
+    if request.method == "POST":
+        e_link = request.form.get('product')
+        ess = {"link": e_link}
+        db.child("Cart").push(ess)
+        return redirect(url_for('cart'))
+    return render_template('essence.html')
+
+
+@app.route('/flormar', methods=['GET', 'POST'])
+def flormar():
+    if request.method == "POST":
+        f_link = request.form.get('product')
+        flo = {"link": f_link}
+        db.child("Cart").push(flo)
+        return redirect(url_for('cart'))
+    
+    return render_template('flormar.html')
+
+
+@app.route('/nars', methods=['GET', 'POST'])
+def nars():
+    if request.method == "POST":
+        n_link = request.form.get('product')
+        nars = {"link": n_link}
+        db.child("Cart").push(nars)
+        return redirect(url_for('cart'))
+    return render_template('nars.html')
+
+
+@app.route('/cart', methods=['GET', 'POST'])
+def cart():
+    products = db.child("Cart").get().val()
+    return render_template('cart.html', products=products)
 
 
 if __name__ == '__main__':

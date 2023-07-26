@@ -3,6 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Signup</title>
+    <style>
+                body {
+            background-color: pink;
+        }
+
+        /* Center the form on the page */
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style form elements */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Style the submit button */
+        input[type="submit"] {
+            background-color: pink;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Style the signin button */
+        a button {
+            background-color: pink;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        a button:hover {
+            background-color: #ff6699;
+       
+    </style>
 </head>
 <body>
     <form method="post" action="/signup">
@@ -46,12 +99,7 @@
             </div>
         </div>
 
-        <div>
-            <label>bio*</label>
-            <div class="input-group">
-                <input type="bio"  name="bio" id="bio1">
-            </div>
-        </div>
+        
         
         <!-- Button -->
         <div>

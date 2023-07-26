@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>enjoy your shopping with DIOR</title>
+	<style>
+		body {
+			background-color: #f9eaf5; /* Light pink background color */
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 20px;
+		}
+
+		h1 {
+			color: #d81b60; /* Dark pink heading color */
+		}
+
+		form {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 100px rgba(0, 0, 0, 0.1);
+			border-radius: 50px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 100px;
+		}
+
+		img {
+			width: 250px;
+			height: 250px;
+			border-radius: 50px;
+			border: 20px solid #d81b60; /* Dark pink border for images */
+		}
+
+		input[type="radio"] {
+			display: none; /* Hide the radio buttons */
+		}
+
+		input[type="submit"] {
+			background-color: #d81b60; /* Dark pink button color */
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 50px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #c2185b; /* Slightly darker pink on hover */
+		}
+	</style>
+</head>
+<body>
+
+		<form action='/dior' method='post'>
+			<label>
+			<input type="radio" name="product" value="/static/css/dior5.jpeg">
+			<img src="/static/css/dior5.jpeg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/dior6.jpg">
+			<img src="/static/css/dior6.jpg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/dior8.jpeg">
+			<img src="/static/css/dior8.jpeg" style="width:500px;height:500px;">
+			</label>
+
+			<br>
+			<label>
+			<input type="radio" name="product" value="/static/css/dior7.jpg">
+			<img src="/static/css/dior7.jpg" style="width:500px;height:500px;">
+			</label>
+			<br>
+
+			<input type="submit" value="Add to Cart">
+		</form>
+
+
+
+
+
+
+
+
+		
+</body>
+</html>
